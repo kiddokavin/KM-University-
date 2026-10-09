@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KM University - Excellence in Higher Education</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ==================== NAVIGATION BAR ==================== -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo" data-page="home">
+                <span class="logo-icon">🎓</span>KM <span>University</span>
+            </a>
+            
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active" data-page="home">Home</a>
+                <a href="#admissions" class="nav-link" data-page="admissions">Admissions</a>
+                <a href="#courses" class="nav-link" data-page="courses">Courses</a>
+                <a href="#faculty" class="nav-link" data-page="faculty">Faculty</a>
+                <a href="#events" class="nav-link" data-page="events">Events</a>
+                <a href="#gallery" class="nav-link" data-page="gallery">Gallery</a>
+                <a href="#contact" class="nav-link" data-page="contact">Contact</a>
+            </nav>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">☰</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+
+        <!-- ==================== 1. HOMEPAGE ==================== -->
+        <section id="home" class="page-section active">
+            <!-- Hero Section -->
+            <div class="hero-banner">
+                <div class="container hero-container">
+                    <div class="hero-text">
+                        <span class="badge">🚀 ADMISSIONS OPEN 2026-2027</span>
+                        <h1>Shaping Tomorrow's Global Leaders & Innovators</h1>
+                        <p>KM University offers world-class academic programs in Computer Science, Artificial Intelligence, Cyber Security, and Business Management with 98% placement track records.</p>
+                        <div class="hero-btns">
+                            <button class="btn btn-primary" data-page="admissions">Apply For Admission</button>
+                            <button class="btn btn-secondary" data-page="courses">Explore Programs</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container main-body">
+                <!-- College Intro -->
+                <div class="intro-grid">
+                    <div class="intro-card">
+                        <span class="icon">🏛️</span>
+                        <h3>Legacy of Academic Excellence</h3>
+                        <p>Established in 1998, KM University is recognized as a premier institution dedicated to cutting-edge research, hands-on industry exposure, and holistic student development.</p>
+                    </div>
+                    <div class="intro-card">
+                        <span class="icon">🔬</span>
+                        <h3>Modern Laboratories & R&D Labs</h3>
+                        <p>Equipped with state-of-the-art AI supercomputing hubs, IoT labs, and cyber security centers supported by global technology partners.</p>
+                    </div>
+                    <div class="intro-card">
+                        <span class="icon">💼</span>
+                        <h3>Top Placement Network</h3>
+                        <p>Over 250+ top global companies recruit our graduates annually with competitive salary packages and global internship opportunities.</p>
+                    </div>
+                </div>
+
+                <!-- Stats Counter Bar -->
+                <div class="stats-bar">
+                    <div class="stat-item">
+                        <span class="stat-num">5,000+</span>
+                        <span class="stat-lbl">Active Students</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">98%</span>
+                        <span class="stat-lbl">Placement Success Rate</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">120+</span>
+                        <span class="stat-lbl">Expert Faculty Members</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">50+</span>
+                        <span class="stat-lbl">Global University MoUs</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 2. ADMISSIONS PAGE ==================== -->
+        <section id="admissions" class="page-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Admissions 2026</h2>
+                    <p>Begin your educational journey with KM University. Follow our simple application process.</p>
+                </div>
+
+                <!-- Admission Steps -->
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-num">1</div>
+                        <h4>Fill Application</h4>
+                        <p>Submit your academic details through our online portal.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-num">2</div>
+                        <h4>Document Review</h4>
+                        <p>Our admissions committee verifies submitted transcripts.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-num">3</div>
+                        <h4>Merit Interview</h4>
+                        <p>Shortlisted candidates attend an interactive counseling round.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-num">4</div>
+                        <h4>Final Enrollment</h4>
+                        <p>Pay enrollment fee and receive student orientation kit.</p>
+                    </div>
+                </div>
+
+                <!-- Admission Application Form -->
+                <div class="form-wrapper">
+                    <h3>Online Admission Application Form</h3>
+                    <form id="admissionForm" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="admName">Full Name *</label>
+                                <input type="text" id="admName" placeholder="Enter student full name" required>
+                                <small class="error-text" id="admNameError">Full Name is required.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="admEmail">Email Address *</label>
+                                <input type="email" id="admEmail" placeholder="student@domain.com" required>
+                                <small class="error-text" id="admEmailError">Valid email address is required.</small>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="admPhone">Phone Number *</label>
+                                <input type="tel" id="admPhone" placeholder="10-digit phone number" required>
+                                <small class="error-text" id="admPhoneError">10-digit phone number required.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="admCourse">Preferred Course *</label>
+                                <select id="admCourse" required>
+                                    <option value="">-- Select Course --</option>
+                                    <option value="B.Tech CS">B.Tech - Computer Science & Engineering</option>
+                                    <option value="B.Tech AI">B.Tech - Artificial Intelligence & Data Science</option>
+                                    <option value="B.Tech Cyber">B.Tech - Cyber Security</option>
+                                    <option value="M.Tech SE">M.Tech - Software Engineering</option>
+                                    <option value="MBA Tech">MBA - Technology Management</option>
+                                </select>
+                                <small class="error-text" id="admCourseError">Please select a course.</small>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="admPercentage">High School / Higher Secondary Percentage (%) *</label>
+                            <input type="number" id="admPercentage" placeholder="e.g. 85.5" min="50" max="100" step="0.1" required>
+                            <small class="error-text" id="admPercentageError">Enter percentage between 50 and 100.</small>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">Submit Admission Application 🚀</button>
+                    </form>
+                    <div class="alert-success" id="admAlert">🎉 Application Submitted Successfully! Reference ID: KM-2026-9041. Our team will contact you shortly.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 3. COURSES PAGE ==================== -->
+        <section id="courses" class="page-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Academic Programs & Courses</h2>
+                    <p>Industry-aligned curriculum designed to build technical expertise and career readiness.</p>
+                </div>
+
+                <div class="cards-grid">
+                    <div class="course-card">
+                        <span class="course-badge">UNDERGRADUATE</span>
+                        <h3>B.Tech Computer Science & Engineering</h3>
+                        <p>Focuses on core algorithms, software architecture, full-stack web development, and cloud computing ecosystems.</p>
+                        <div class="course-meta">
+                            <span>⏱️ 4 Years</span>
+                            <span>🎓 Full-Time</span>
+                        </div>
+                    </div>
+
+                    <div class="course-card">
+                        <span class="course-badge">UNDERGRADUATE</span>
+                        <h3>B.Tech AI & Data Science</h3>
+                        <p>Specialized program covering deep learning, machine learning pipelines, big data analytics, and neural networks.</p>
+                        <div class="course-meta">
+                            <span>⏱️ 4 Years</span>
+                            <span>🎓 Full-Time</span>
+                        </div>
+                    </div>
+
+                    <div class="course-card">
+                        <span class="course-badge">UNDERGRADUATE</span>
+                        <h3>B.Tech Cyber Security</h3>
+                        <p>Teaches ethical hacking, network forensics, threat intelligence, cryptography, and zero-trust security architectures.</p>
+                        <div class="course-meta">
+                            <span>⏱️ 4 Years</span>
+                            <span>🎓 Full-Time</span>
+                        </div>
+                    </div>
+
+                    <div class="course-card">
+                        <span class="course-badge pg">POSTGRADUATE</span>
+                        <h3>M.Tech Software Engineering</h3>
+                        <p>Advanced study in enterprise software engineering, distributed cloud systems, and DevOps automation.</p>
+                        <div class="course-meta">
+                            <span>⏱️ 2 Years</span>
+                            <span>🎓 Full-Time</span>
+                        </div>
+                    </div>
+
+                    <div class="course-card">
+                        <span class="course-badge pg">POSTGRADUATE</span>
+                        <h3>MBA Technology Management</h3>
+                        <p>Prepares future tech executives in digital transformation, IT leadership, product strategy, and analytics.</p>
+                        <div class="course-meta">
+                            <span>⏱️ 2 Years</span>
+                            <span>🎓 Full-Time</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 4. FACULTY PAGE ==================== -->
+        <section id="faculty" class="page-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Distinguished Faculty Members</h2>
+                    <p>Learn from accomplished professors, researchers, and tech leaders.</p>
+                </div>
+
+                <div class="cards-grid">
+                    <div class="faculty-card">
+                        <div class="faculty-avatar">AT</div>
+                        <h3>Dr. Alan Turing</h3>
+                        <span class="faculty-role">Dean, School of Computing</span>
+                        <p>Ph.D. in Computer Science. 20+ years of research in Quantum Computing and Artificial Intelligence.</p>
+                    </div>
+
+                    <div class="faculty-card">
+                        <div class="faculty-avatar">GH</div>
+                        <h3>Dr. Grace Hopper</h3>
+                        <span class="faculty-role">Head of Department - Software Systems</span>
+                        <p>Ph.D. in Software Engineering. Expert in compiler design, programming languages, and cloud systems.</p>
+                    </div>
+
+                    <div class="faculty-card">
+                        <div class="faculty-avatar">AL</div>
+                        <h3>Prof. Ada Lovelace</h3>
+                        <span class="faculty-role">Lead Professor - Cyber Security</span>
+                        <p>M.Tech, CISSP. Specializes in cryptography, network defense, and ethical hacking protocols.</p>
+                    </div>
+
+                    <div class="faculty-card">
+                        <div class="faculty-avatar">CS</div>
+                        <h3>Dr. Claude Shannon</h3>
+                        <span class="faculty-role">Director - Data Science Research Lab</span>
+                        <p>Ph.D. in Information Theory. Research focus on neural networks and statistical machine learning.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 5. EVENTS PAGE ==================== -->
+        <section id="events" class="page-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Upcoming Campus Events</h2>
+                    <p>Participate in technical symposiums, hackathons, and cultural festivals.</p>
+                </div>
+
+                <div class="events-list">
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="day">15</span>
+                            <span class="month">OCT</span>
+                        </div>
+                        <div class="event-info">
+                            <h3>KM National Hackathon 2026</h3>
+                            <p>36-hour continuous coding marathon focusing on AI, Web3, and Sustainable Tech solutions.</p>
+                            <span>📍 Auditorium Hall A • 09:00 AM</span>
+                        </div>
+                        <button class="btn btn-secondary btn-event-reg">Register Event</button>
+                    </div>
+
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="day">28</span>
+                            <span class="month">OCT</span>
+                        </div>
+                        <div class="event-info">
+                            <h3>Global Cyber Security Summit</h3>
+                            <p>Guest lecture series featuring international security experts and live ethical hacking demos.</p>
+                            <span>📍 Conference Center B • 10:30 AM</span>
+                        </div>
+                        <button class="btn btn-secondary btn-event-reg">Register Event</button>
+                    </div>
+
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="day">10</span>
+                            <span class="month">NOV</span>
+                        </div>
+                        <div class="event-info">
+                            <h3>Annual Tech & Cultural Festival</h3>
+                            <p>Inter-college robotics challenge, web design contest, gaming tournament, and live music show.</p>
+                            <span>📍 University Sports Complex • All Day</span>
+                        </div>
+                        <button class="btn btn-secondary btn-event-reg">Register Event</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 6. GALLERY PAGE ==================== -->
+        <section id="gallery" class="page-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Campus Gallery</h2>
+                    <p>Explore life at KM University through our campus visuals.</p>
+                </div>
+
+                <!-- Gallery Category Filters -->
+                <div class="gallery-filters">
+                    <button class="filter-btn active" data-cat="all">All Photos</button>
+                    <button class="filter-btn" data-cat="campus">Campus Infrastructure</button>
+                    <button class="filter-btn" data-cat="labs">Research Labs</button>
+                    <button class="filter-btn" data-cat="events">Events & Festivals</button>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-card" data-cat="campus">
+                        <div class="gallery-placeholder campus-bg">🏛️ Main Academic Block</div>
+                    </div>
+                    <div class="gallery-card" data-cat="labs">
+                        <div class="gallery-placeholder lab-bg">💻 AI Supercomputing Lab</div>
+                    </div>
+                    <div class="gallery-card" data-cat="events">
+                        <div class="gallery-placeholder event-bg">🎉 Annual Hackathon 2026</div>
+                    </div>
+                    <div class="gallery-card" data-cat="campus">
+                        <div class="gallery-placeholder campus-bg">📚 Central Digital Library</div>
+                    </div>
+                    <div class="gallery-card" data-cat="labs">
+                        <div class="gallery-placeholder lab-bg">🔒 Cyber Security Operations Center</div>
+                    </div>
+                    <div class="gallery-card" data-cat="events">
+                        <div class="gallery-placeholder event-bg">🏆 Convocation Ceremony</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 7. CONTACT PAGE ==================== -->
+        <section id="contact" class="page-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Contact & Location</h2>
+                    <p>Get in touch with our administrative offices or visit our campus.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="info-card">
+                            <span class="icon">📍</span>
+                            <div>
+                                <h4>University Address</h4>
+                                <p>KM University Campus, Tech City Boulevard, Silicon Region - 600001</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <span class="icon">📧</span>
+                            <div>
+                                <h4>Email Enquiries</h4>
+                                <p>admissions@kmuniversity.edu.in<br>info@kmuniversity.edu.in</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <span class="icon">📞</span>
+                            <div>
+                                <h4>Helpline Phone</h4>
+                                <p>+91 (044) 2800-8900 / +91 (044) 2800-8901</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- General Contact Form -->
+                    <div class="form-wrapper">
+                        <h3>Send General Enquiry</h3>
+                        <form id="contactForm" novalidate>
+                            <div class="form-group">
+                                <label for="cntName">Your Name *</label>
+                                <input type="text" id="cntName" placeholder="Full Name" required>
+                                <small class="error-text" id="cntNameError">Name is required.</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cntEmail">Your Email *</label>
+                                <input type="email" id="cntEmail" placeholder="email@domain.com" required>
+                                <small class="error-text" id="cntEmailError">Valid email required.</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cntMessage">Message / Enquiry *</label>
+                                <textarea id="cntMessage" rows="4" placeholder="How can we help you?" required></textarea>
+                                <small class="error-text" id="cntMessageError">Message cannot be empty.</small>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-full">Send Message 📨</button>
+                        </form>
+                        <div class="alert-success" id="cntAlert">Message sent successfully! We will get back to you shortly.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#home" class="logo" data-page="home">
+                    <span class="logo-icon">🎓</span>KM <span>University</span>
+                </a>
+                <p>Empowering minds, driving technological innovation, and fostering global leaders since 1998.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Navigation</h4>
+                <ul>
+                    <li><a href="#home" data-page="home">Home</a></li>
+                    <li><a href="#admissions" data-page="admissions">Admissions</a></li>
+                    <li><a href="#courses" data-page="courses">Courses</a></li>
+                    <li><a href="#faculty" data-page="faculty">Faculty</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Student Links</h4>
+                <ul>
+                    <li><a href="#events" data-page="events">Campus Events</a></li>
+                    <li><a href="#gallery" data-page="gallery">Photo Gallery</a></li>
+                    <li><a href="#contact" data-page="contact">Helpdesk</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 KM University. All Rights Reserved. Created for CyberSNova Internship.</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification Container -->
+    <div id="toast" class="toast-popup">Notification message</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

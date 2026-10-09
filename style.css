@@ -1,0 +1,673 @@
+/* ==========================================================================
+   Apex University - College Management Website Stylesheet
+   Theme: Premium Blue & White Palette (#1e3a8a, #2563eb, #f0f7ff, #ffffff)
+   ========================================================================== */
+
+:root {
+    --primary-blue: #1e3a8a;
+    --accent-blue: #2563eb;
+    --light-blue-bg: #f0f7ff;
+    --card-bg: #ffffff;
+    --text-dark: #0f172a;
+    --text-muted: #64748b;
+    --border-color: #cbd5e1;
+    --error-red: #ef4444;
+    --success-green: #10b981;
+    --font-main: 'Plus Jakarta Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--light-blue-bg);
+    color: var(--text-dark);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ==================== BUTTONS & BADGES ==================== */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    font-family: var(--font-main);
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: var(--accent-blue);
+    color: white;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+.btn-primary:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35);
+}
+
+.btn-secondary {
+    background: white;
+    color: var(--primary-blue);
+    border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+    background: var(--light-blue-bg);
+    border-color: var(--accent-blue);
+}
+
+.btn-full {
+    width: 100%;
+}
+
+.badge {
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--accent-blue);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+/* ==================== NAVBAR ==================== */
+.navbar {
+    background: #ffffff;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.1rem 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary-blue);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.logo span {
+    color: var(--accent-blue);
+}
+
+.nav-menu {
+    display: flex;
+    gap: 1.8rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+    padding: 0.4rem 0;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--accent-blue);
+    border-bottom: 2px solid var(--accent-blue);
+}
+
+.mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    color: var(--primary-blue);
+    cursor: pointer;
+}
+
+/* ==================== PAGE SECTIONS & SWITCHING ==================== */
+.main-content {
+    flex: 1;
+}
+
+.page-section {
+    display: none; /* Controlled by JS tab switching */
+    padding: 3.5rem 0;
+    animation: fadeIn 0.4s ease;
+}
+
+.page-section.active {
+    display: block;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-title h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+}
+
+.section-title p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+}
+
+/* ==================== 1. HOMEPAGE STYLES ==================== */
+.hero-banner {
+    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+    color: white;
+    padding: 5rem 0;
+    margin-bottom: 3rem;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1.2rem;
+}
+
+.hero-text p {
+    font-size: 1.15rem;
+    opacity: 0.9;
+    max-width: 650px;
+    margin-bottom: 2rem;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 1rem;
+}
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3.5rem;
+}
+
+.intro-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    border: 1px solid #e2e8f0;
+}
+
+.intro-card .icon {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.intro-card h3 {
+    font-size: 1.25rem;
+    color: var(--primary-blue);
+    margin-bottom: 0.6rem;
+}
+
+.stats-bar {
+    background: white;
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.stat-num {
+    display: block;
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: var(--accent-blue);
+}
+
+.stat-lbl {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+/* ==================== 2. ADMISSIONS & FORMS ==================== */
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3.5rem;
+}
+
+.step-card {
+    background: white;
+    padding: 1.8rem;
+    border-radius: 14px;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+}
+
+.step-num {
+    width: 42px; height: 42px;
+    background: var(--accent-blue);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    margin: 0 auto 1rem auto;
+}
+
+.form-wrapper {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid #e2e8f0;
+}
+
+.form-wrapper h3 {
+    font-size: 1.4rem;
+    color: var(--primary-blue);
+    margin-bottom: 1.5rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+label {
+    display: block;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0.4rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1.5px solid var(--border-color);
+    border-radius: 10px;
+    font-family: var(--font-main);
+    font-size: 0.95rem;
+    outline: none;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.error-text {
+    display: none;
+    color: var(--error-red);
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+}
+
+.error-text.show {
+    display: block;
+}
+
+.alert-success {
+    display: none;
+    background: #d1fae5;
+    color: #065f46;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* ==================== 3. COURSES & FACULTY CARDS ==================== */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.course-card, .faculty-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover, .faculty-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+}
+
+.course-badge {
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--accent-blue);
+    font-size: 0.72rem;
+    font-weight: 800;
+    padding: 0.25rem 0.6rem;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 0.8rem;
+}
+
+.course-badge.pg {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--success-green);
+}
+
+.course-card h3 {
+    font-size: 1.2rem;
+    color: var(--primary-blue);
+    margin-bottom: 0.6rem;
+}
+
+.course-card p {
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    margin-bottom: 1.2rem;
+}
+
+.course-meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.faculty-avatar {
+    width: 60px; height: 60px;
+    background: linear-gradient(135deg, var(--primary-blue), var(--accent-blue));
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.faculty-card h3 {
+    font-size: 1.2rem;
+    color: var(--primary-blue);
+}
+
+.faculty-role {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--accent-blue);
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+}
+
+.faculty-card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* ==================== 4. EVENTS & GALLERY ==================== */
+.events-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.event-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+    border: 1px solid #e2e8f0;
+}
+
+.event-date {
+    background: var(--light-blue-bg);
+    border: 1px solid var(--accent-blue);
+    padding: 0.8rem 1.2rem;
+    border-radius: 12px;
+    text-align: center;
+    min-width: 80px;
+}
+
+.event-date .day {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--accent-blue);
+}
+
+.event-date .month {
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: var(--primary-blue);
+}
+
+.event-info {
+    flex: 1;
+}
+
+.event-info h3 {
+    font-size: 1.15rem;
+    color: var(--primary-blue);
+    margin-bottom: 0.3rem;
+}
+
+.event-info p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+}
+
+.event-info span {
+    font-size: 0.8rem;
+    color: var(--accent-blue);
+    font-weight: 600;
+}
+
+.gallery-filters {
+    display: flex;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-bottom: 2rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.gallery-placeholder {
+    height: 180px;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.4);
+}
+
+.campus-bg { background: linear-gradient(135deg, #1e3a8a, #3b82f6); }
+.lab-bg { background: linear-gradient(135deg, #065f46, #10b981); }
+.event-bg { background: linear-gradient(135deg, #581c87, #8b5cf6); }
+
+/* ==================== 5. CONTACT & FOOTER ==================== */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2.5rem;
+}
+
+.info-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 14px;
+    display: flex;
+    gap: 1.2rem;
+    margin-bottom: 1rem;
+    border: 1px solid #e2e8f0;
+}
+
+.info-card .icon {
+    font-size: 1.8rem;
+}
+
+.footer {
+    background: var(--primary-blue);
+    color: white;
+    padding-top: 3.5rem;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 2.5rem;
+}
+
+.footer-brand p {
+    opacity: 0.8;
+    margin-top: 0.8rem;
+    font-size: 0.9rem;
+    max-width: 320px;
+}
+
+.footer-brand .logo {
+    color: white;
+}
+
+.footer-col h4 {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-col a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.footer-col a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    background: #0f172a;
+    text-align: center;
+    padding: 1.2rem 0;
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+
+/* Toast Popup */
+.toast-popup {
+    display: none;
+    position: fixed;
+    bottom: 20px; right: 20px;
+    background: #0f172a;
+    color: white;
+    padding: 0.85rem 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--accent-blue);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    z-index: 2000;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Animations & Mobile Responsiveness */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 850px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: white;
+        padding: 1.5rem;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .nav-menu.show {
+        display: flex;
+    }
+    .mobile-toggle {
+        display: block;
+    }
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+    .form-row, .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    .event-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+}
